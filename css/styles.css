@@ -14,7 +14,6 @@ body {
 }
 .header {
     text-align: center;
-    padding-bottom: 40px;
     font-size: 20px;
     margin-bottom: 14px;
 }
@@ -45,6 +44,7 @@ body {
     font-size: 13px;
     color: gray;
     margin-bottom: 20px;
+    margin-top: 40px;
     color: rgba(61, 61, 61, 1);
     line-height: 16px;
 }
