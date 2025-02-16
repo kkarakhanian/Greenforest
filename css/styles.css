@@ -133,3 +133,15 @@ input[name="confirm-password"] {
     padding-bottom: 9px;
     gap: 4px;
 }
+.password-container {
+    position: relative;
+
+.toggle-pass {
+    position: absolute;
+    right: 8px;
+    top: 10px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    }
+}
