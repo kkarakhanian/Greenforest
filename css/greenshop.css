@@ -4,29 +4,24 @@
     box-sizing: border-box;
 }
 
-body {
-    width: 1440px;
-    height: 598px;
-}
 header {
-    max-width: 1400px;
+    width: 1200px;
     height: 53px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    margin-left: 60px;
     margin-top: 30px;
-    margin-right: 60px;
     border-bottom: 0.3px solid rgba(70, 163, 88, 0.5);
     margin-bottom: 12px;
+    margin: 30px auto 12px;
+}
+.navbar {
+    max-width: 1200px;
+    margin: 30px auto 12px;
 }
 
 nav {
-    display: inline-block;
-}
-.navbar {
-    margin-left: 120px;
-    margin-right: 120px;
+    margin-left: 230px;
 }
 
 nav ul li {
@@ -38,8 +33,8 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: black;
     font-size: 16px;
+    font-weight: 400;
     padding-bottom: 5px;
     color: rgba(61, 61, 61, 1);
 }
@@ -61,14 +56,14 @@ nav ul li a {
 }
 
 .active {
-    font-weight: bold;
+    font-weight: 700;
     position: relative;
 }
 .active::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -21px;
+    bottom: -20px;
     width: 100%;
     height: 3px;
     background-color: green;
@@ -91,6 +86,7 @@ nav ul li a {
     color: white;
     border: none;
     margin-bottom: 18px;
+    margin-left: 316px;
     padding: 8px 18px 8px 40px;
     border-radius: 5px;
     cursor: pointer;
@@ -104,42 +100,35 @@ nav ul li a {
 .button:visited {
     color: white;
 }
-
 .hero {
-    max-width: 1200px;
-    max-height: 450px;
     display: flex;
-    align-items: center;
     margin-left: 120px;
     margin-right: 120px;
     background: linear-gradient(97.77deg, rgba(245, 245, 245, 0.5) -23.46%, rgba(245, 245, 245, 0.5) 107.51%);
 }
 
-
 .hero-text {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    text-align: left;
-    padding-left: 40px;
+    padding-left: 42px;
 }
-
 .welcome {
     max-width: 530px;
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
     padding-top: 68px;
+    padding-left: 2px;
     margin-bottom: 8px;
 
 }
 
 .big-text {
-    width: 100%;
-    display: block;
     margin-bottom: 6px;
     font-size: 70px;
     line-height: 70px;
+    text-align: left;
     color: rgba(61, 61, 61, 1);
 }
 
@@ -149,9 +138,10 @@ nav ul li a {
 
 .description {
     color: rgba(114, 114, 114, 1);
-    font-weight: 400;
     font-size: 14px;
     line-height: 24px;
+    max-width: 558px;
+    text-align: justify;
 }
 
 .shop-now {
@@ -175,6 +165,7 @@ nav ul li a {
 .container {
     display: inline-block;
     position: relative;
+    margin-left: 56px;
 }
 
 .big-image {
@@ -185,6 +176,6 @@ nav ul li a {
 .small-box {
     position: absolute;
     bottom: 16px;
-    left: 10px;
+    left: 62px;
     width: 135px;
 }
