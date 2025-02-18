@@ -5,7 +5,6 @@
 }
 
 body {
-    width: 100%;
     width: 1440px;
     height: 598px;
 }
@@ -24,6 +23,10 @@ header {
 
 nav {
     display: inline-block;
+}
+.navbar {
+    margin-left: 120px;
+    margin-right: 120px;
 }
 
 nav ul li {
@@ -57,18 +60,6 @@ nav ul li a {
     margin-right: 8px;
 }
 
-.nav-links li {
-    display: inline-block;
-    margin: 0 25px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: black;
-    font-size: 16px;
-    position: relative;
-}
-
 .active {
     font-weight: bold;
     position: relative;
@@ -88,7 +79,7 @@ nav ul li a {
     .logout {
         position: absolute;
         right: 63px;
-        bottom: 8px
+        bottom: 8px;
         height: 20px;
         width: 20px;
         background: transparent;
@@ -100,20 +91,27 @@ nav ul li a {
     color: white;
     border: none;
     margin-bottom: 18px;
-    left: 18px;
     padding: 8px 18px 8px 40px;
     border-radius: 5px;
     cursor: pointer;
-
 }
+.button {
+    text-decoration: none;
+}
+.button:active {
+    color: white;
+}
+.button:visited {
+    color: white;
+}
+
 .hero {
-    max-width: 1400px;
-    height: 450px;
+    max-width: 1200px;
+    max-height: 450px;
     display: flex;
     align-items: center;
-    padding: 68px 0 85px 0;
-    margin-left: 60px;
-    margin-right: 60px;
+    margin-left: 120px;
+    margin-right: 120px;
     background: linear-gradient(97.77deg, rgba(245, 245, 245, 0.5) -23.46%, rgba(245, 245, 245, 0.5) 107.51%);
 }
 
@@ -123,7 +121,6 @@ nav ul li a {
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
-    width: 100%;
     padding-left: 40px;
 }
 
@@ -151,7 +148,6 @@ nav ul li a {
 }
 
 .description {
-    margin-bottom: 44px;
     color: rgba(114, 114, 114, 1);
     font-weight: 400;
     font-size: 14px;
@@ -168,6 +164,8 @@ nav ul li a {
     border: none;
     padding-top: 12px;
     padding-bottom: 8px;
+    margin-bottom: 68px;
+    margin-top: 44px;
     font-size: 16px;
     line-height: 20px;
     border-radius: 5px;
