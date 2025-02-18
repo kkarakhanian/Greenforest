@@ -10,9 +10,7 @@ header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 30px;
-    border-bottom: 0.3px solid rgba(70, 163, 88, 0.5);
-    margin-bottom: 12px;
+    border-bottom: 0.4px solid rgba(70, 163, 88, 0.5);
     margin: 30px auto 12px;
 }
 .navbar {
