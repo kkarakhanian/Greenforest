@@ -1,28 +1,22 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-body {
-    width: 1440px;
-    height: 598px;
-}
 header {
     max-width: 1200px;
-    height: 53px;
+    max-height: 53px;
+    margin: 0 auto;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin-left: 60px;
-    margin-top: 30px;
-    margin-right: 60px;
     border-bottom: 0.3px solid rgba(70, 163, 88, 0.5);
-    margin-bottom: 12px;
-}
 
+}
 .navbar {
-    margin-left: 120px;
-    margin-right: 120px;
+    max-width: 1200px;
+    margin: 30px auto 12px;
 }
 nav {
     margin-left: 230px;
@@ -37,7 +31,6 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: black;
     font-size: 16px;
     font-weight: 400;
     padding-bottom: 5px;
@@ -68,7 +61,7 @@ nav ul li a {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -21px;
+    bottom: -20px;
     width: 100%;
     height: 3px;
     background-color: green;
@@ -76,40 +69,44 @@ nav ul li a {
 .login-btn {
     display: inline-block;
     position: relative;
-    box-sizing: border-box;
     .logout {
         position: absolute;
         right: 63px;
         bottom: 8px;
         height: 20px;
         width: 20px;
-        background: transparent;
+        background: rgba(70, 163, 88, 1);
         border: none;
     }
     width: 100px;
     height: 35px;
     background: rgba(70, 163, 88, 1);
-    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
     border: none;
     margin-bottom: 18px;
     margin-left: 316px;
     padding: 8px 18px 8px 40px;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
 }
 .button {
     text-decoration: none;
 }
 .button:active {
-    color: white;
+    color: rgba(255, 255, 255, 1);
 }
 .button:visited {
-    color: white;
+    color: rgba(255, 255, 255, 1);
 }
+
 .hero {
+    max-width: 1200px;
+    max-height: 450px;
+    margin: 0 auto;
     display: flex;
-    margin-left: 120px;
-    margin-right: 120px;
+    justify-content: center;
     background: linear-gradient(97.77deg, rgba(245, 245, 245, 0.5) -23.46%, rgba(245, 245, 245, 0.5) 107.51%);
 }
 
@@ -157,10 +154,10 @@ nav ul li a {
     font-weight: 700;
     display: inline-block;
     background: rgba(70, 163, 88, 1);
-    color: white;
+    color: rgba(255, 255, 255, 1);
     border: none;
-    padding-top: 12px;
-    padding-bottom: 8px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     margin-bottom: 68px;
     margin-top: 44px;
     font-size: 16px;
