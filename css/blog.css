@@ -217,9 +217,9 @@ h1 {
     text-align: left;
 }
 
-.img-flex img {
+.img-flex {
     width: 268px;
-    height: 195px;
+    height: 196px;
 }
 
 .text-flex {
@@ -271,7 +271,7 @@ h1 {
     color: rgba(70, 163, 88, 1);
 
 }
-img {
+.find-more img{
     margin-left: 6px;
 }
 
