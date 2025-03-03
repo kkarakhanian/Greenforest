@@ -11,20 +11,20 @@ header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    border-bottom: 0.3px solid rgba(70, 163, 88, 0.5)
+    border-bottom: 0.3px solid rgba(70, 163, 88, 0.5);
+}
 
-}
 .navbar {
-    max-width: 1200px;
     margin: 30px auto 12px;
-    gap: 24px;
+    justify-content: space-between;
 }
-nav {
-    margin-left: 230px;
-}
+
+nav {}
+
 nav .navmenu ul {
+    justify-content: space-between;
     list-style: none;
-    padding: 0;
+    padding-bottom: 16px;
     margin: 0;
     display: flex;
 }
@@ -41,14 +41,14 @@ nav .navmenu ul li a.main {
     font-weight: normal;
 }
 
-nav .navmenu ul li a.main:hover {
-    font-weight: bold;
+li.dropdown:hover .submenu {
+    display: block;
 }
 
 nav .navmenu ul li a.main::after {
     content: '';
     position: absolute;
-    bottom: -8px;
+    bottom: -14px;
     left: 0;
     width: 0;
     height: 2px;
@@ -56,17 +56,17 @@ nav .navmenu ul li a.main::after {
     transition: width 0.3s ease;
 }
 
-nav .navmenu ul li a.main:hover::after {
+nav .navmenu ul li:hover a.main::after {
     width: 100%;
 }
 
 .dropdown .submenu {
     display: none;
     position: absolute;
-    margin-top: 18px;
+    top: 65px;
+    left: 0;
     margin-left: -26px;
     background: rgba(237, 246, 238, 1);
-    padding: 0;
     list-style: none;
     width: 160px;
     z-index: 10;
@@ -75,7 +75,6 @@ nav .navmenu ul li a.main:hover::after {
 .dropdown:hover .submenu {
     display: block;
 }
-
 .dropdown .submenu li a.sub {
     display: block;
     padding: 10px 15px;
@@ -83,8 +82,9 @@ nav .navmenu ul li a.main:hover::after {
     color: rgba(61, 61, 61, 1);
     font-weight: normal;
 }
-.dropdown .submenu li a.sub:hover,
-.dropdown-two .submenu-two li a.sub-two:hover {
+
+.dropdown .submenu li:hover a.sub,
+.dropdown-two .submenu-two li:hover a.sub-two {
     background-color: rgba(237, 246, 238, 1);
     font-weight: bold;
 }
@@ -113,7 +113,7 @@ nav .navmenu ul li a.main:hover::after {
     font-weight: normal;
 }
 
-.dropdown-two .submenu-two li a.sub-two:hover {
+.dropdown-two .submenu-two li:hover a.sub-two {
     background-color: transparent;
     font-weight: bold;
 }
@@ -127,11 +127,12 @@ nav .navmenu ul li a.main:hover::after {
     background-color: rgba(237, 246, 238, 1);
 }
 
-.dropdown .submenu li.dropdown-two a.priming:hover {
+.dropdown .submenu li.dropdown-two:hover a.priming {
     font-weight: bold;
     color: rgba(255, 255, 255, 1);
     background-color: rgba(26, 113, 42, 1);
 }
+
 .arrow {
     width: 10px;
     height: 10px;
@@ -143,7 +144,7 @@ img[alt="Priming"] {
     transition: transform 0.4s ease;
 }
 
-.dropdown .submenu li.dropdown-two a.priming:hover img[alt="Priming"] {
+.dropdown .submenu li.dropdown-two:hover a.priming img[alt="Priming"] {
     transform: rotate(180deg);
 }
 
@@ -167,6 +168,7 @@ img[alt="Priming"] {
     font-weight: 700;
     position: relative;
 }
+
 .active::after {
     content: "";
     position: absolute;
@@ -176,18 +178,10 @@ img[alt="Priming"] {
     height: 3px;
     background-color: green;
 }
+
 .login-btn {
     display: inline-block;
     position: relative;
-    .logout {
-        position: absolute;
-        right: 63px;
-        bottom: 8px;
-        height: 20px;
-        width: 20px;
-        background: rgba(70, 163, 88, 1);
-        border: none;
-    }
     width: 100px;
     height: 35px;
     background: rgba(70, 163, 88, 1);
@@ -196,17 +190,29 @@ img[alt="Priming"] {
     color: rgba(255, 255, 255, 1);
     border: none;
     margin-bottom: 18px;
-    margin-left: 334px;
     padding: 8px 18px 8px 40px;
     border-radius: 6px;
     cursor: pointer;
 }
+
+.login-btn .logout {
+    position: absolute;
+    right: 63px;
+    bottom: 8px;
+    height: 20px;
+    width: 20px;
+    background: rgba(70, 163, 88, 1);
+    border: none;
+}
+
 .button {
     text-decoration: none;
 }
+
 .button:active {
     color: rgba(255, 255, 255, 1);
 }
+
 .button:visited {
     color: rgba(255, 255, 255, 1);
 }
@@ -226,6 +232,7 @@ img[alt="Priming"] {
     align-items: flex-start;
     padding-left: 42px;
 }
+
 .welcome {
     max-width: 530px;
     font-weight: 500;
@@ -234,7 +241,6 @@ img[alt="Priming"] {
     padding-top: 68px;
     padding-left: 2px;
     margin-bottom: 8px;
-
 }
 
 .big-text {
@@ -245,51 +251,52 @@ img[alt="Priming"] {
     color: rgba(61, 61, 61, 1);
 }
 
+
 .green {
     color: rgba(70, 163, 88, 1);
 }
 
-.description {
-    color: rgba(114, 114, 114, 1);
-    font-size: 14px;
-    line-height: 24px;
-    max-width: 558px;
-    max-height: 46px;
-    text-align: justify;
-}
+    .description {
+        color: rgba(114, 114, 114, 1);
+        font-size: 14px;
+        line-height: 24px;
+        max-width: 558px;
+        max-height: 46px;
+        text-align: justify;
+    }
 
-.shop-now {
-    width: 140px;
-    height: 40px;
-    font-weight: 700;
-    display: inline-block;
-    background: rgba(70, 163, 88, 1);
-    color: rgba(255, 255, 255, 1);
-    border: none;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-bottom: 68px;
-    margin-top: 44px;
-    font-size: 16px;
-    line-height: 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
+    .shop-now {
+        width: 140px;
+        height: 40px;
+        font-weight: 700;
+        display: inline-block;
+        background: rgba(70, 163, 88, 1);
+        color: rgba(255, 255, 255, 1);
+        border: none;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-bottom: 68px;
+        margin-top: 44px;
+        font-size: 16px;
+        line-height: 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
 
-.container {
-    display: inline-block;
-    position: relative;
-    margin-left: 56px;
-}
+    .container {
+        display: inline-block;
+        position: relative;
+        margin-left: 56px;
+    }
 
-.big-image {
-    width: 507px;
-    height: 450px;
-}
+    .big-image {
+        width: 507px;
+        height: 450px;
+    }
 
-.small-box {
-    position: absolute;
-    bottom: 16px;
-    left: 62px;
-    width: 135px;
-}
+    .small-box {
+        position: absolute;
+        bottom: 16px;
+        left: 62px;
+        width: 135px;
+    }
