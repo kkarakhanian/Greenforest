@@ -19,7 +19,6 @@ header {
     justify-content: space-between;
 }
 
-nav {}
 
 nav .navmenu ul {
     justify-content: space-between;
@@ -39,6 +38,9 @@ nav .navmenu ul li a.main {
     text-decoration: none;
     color: #333;
     font-weight: normal;
+}
+nav .navmenu ul li:hover a.main {
+    font-weight: bold;
 }
 
 li.dropdown:hover .submenu {
@@ -61,14 +63,15 @@ nav .navmenu ul li:hover a.main::after {
 }
 
 .dropdown .submenu {
+    width: 156px;
+    height: 143px;
     display: none;
     position: absolute;
-    top: 65px;
+    top: 100%;
     left: 0;
+    padding-top: 26px;
     margin-left: -26px;
-    background: rgba(237, 246, 238, 1);
     list-style: none;
-    width: 160px;
     z-index: 10;
 }
 
@@ -77,9 +80,12 @@ nav .navmenu ul li:hover a.main::after {
 }
 .dropdown .submenu li a.sub {
     display: block;
-    padding: 10px 15px;
+    padding-top: 8px;
+    padding-left: 14px;
+    padding-bottom: 8px;
     text-decoration: none;
     color: rgba(61, 61, 61, 1);
+    background: rgba(237, 246, 238, 1);
     font-weight: normal;
 }
 
@@ -92,8 +98,8 @@ nav .navmenu ul li:hover a.main::after {
 .dropdown-two .submenu-two {
     display: none;
     position: absolute;
-    margin-left: 160px;
-    margin-top: -160px;
+    left: 100%;
+    top: -300%;
     background: rgba(237, 246, 238, 1);
     padding: 0;
     list-style: none;
@@ -107,20 +113,19 @@ nav .navmenu ul li:hover a.main::after {
 
 .dropdown-two .submenu-two li a.sub-two {
     display: block;
-    padding: 10px 15px;
+    padding-top: 8px;
+    padding-left: 14px;
+    padding-bottom: 8px;
     text-decoration: none;
     color: rgba(61, 61, 61, 1);
     font-weight: normal;
 }
 
-.dropdown-two .submenu-two li:hover a.sub-two {
-    background-color: transparent;
-    font-weight: bold;
-}
-
 .dropdown .submenu li.dropdown-two a.priming {
     display: block;
-    padding: 10px 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 14px;
     text-decoration: none;
     color: rgba(61, 61, 61, 1);
     font-weight: normal;
@@ -136,7 +141,7 @@ nav .navmenu ul li:hover a.main::after {
 .arrow {
     width: 10px;
     height: 10px;
-    margin-left: 56px;
+    margin-left: 58px;
     vertical-align: middle;
 }
 
