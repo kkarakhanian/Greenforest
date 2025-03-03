@@ -3,251 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All plants</title>
-    <link rel="stylesheet" href="css/font.css">
-    <link rel="stylesheet" href="css/plants.css">
+    <title>GreenShop</title>
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/greenshop.css">
     <style>
-        .filter-nav {
-            font-family: "Cera Pro", sans-serif;
-            font-weight: 400;
-        }
-        h5 {
-            font-family: "Cera Pro", sans-serif;
-            font-weight: 400;
-        }
-        p {
+        nav {
             font-family: "Cera Pro", sans-serif;
             font-weight: 700;
         }
-        .pagination a {
-            font-family: "Cera Pro", sans-serif;
-            font-weight: 300;
-        }
-        h3 {
-            font-family: "Cera Pro", sans-serif;
-            font-weight: 700;
-        }
-        .sidebar ul {
-            font-family: "Cera Pro", sans-serif;
-            font-weight: 400;
-        }
-        .active {
-            font-family: "Cera Pro", sans-serif;
-            font-weight: 700;
-        }
-        .sale-text {
-            font-family: "Cera Pro", sans-serif;
-            font-weight: 700;
-        }
-        .sale-header {
-            font-family: "Hanged Letters", sans-serif;
-            font-weight: 400;
-        }
-        .discount-badge {
+        .button {
             font-family: "Cera Pro", sans-serif;
             font-weight: 500;
         }
-        p del {
+        .welcome {
+            font-family: "Cera Pro", sans-serif;
+            font-weight: 500;
+        }
+        .big-text {
+            font-family: "Cera Pro", sans-serif;
+            font-weight: 900;
+        }
+        .description {
             font-family: "Cera Pro", sans-serif;
             font-weight: 400;
+        }
+        .shop-now {
+            font-family: "Cera Pro", sans-serif;
+            font-weight: 700;
         }
     </style>
 </head>
 <body>
-<div class="wrapper">
-    <div class="wrapper-left">
-        <aside class="sidebar">
-            <h3>Categories</h3>
+<header class="navbar">
+    <div class="logo">
+        <img src="./images/vector.svg" alt="GreenShop">
+        <span>GREENSHOP</span>
+    </div>
+    <nav>
+        <div class="navmenu">
             <ul>
-                <li><a href="#" class="active">House Plants</a></li>
-                <li><a href="#">Potted Plants</a></li>
-                <li><a href="#">Seeds</a></li>
-                <li><a href="#">Small Plants</a></li>
-                <li><a href="#">Big Plants</a></li>
-                <li><a href="#">Succulents</a></li>
-                <li><a href="#">Terrariums</a></li>
-                <li><a href="#">Gardening</a></li>
-                <li><a href="#">Accessories</a></li>
+                <li><a class="main" href="#">Home</a></li>
+                <li><a class="main" href="#">Shop</a></li>
+                <li class="dropdown">
+                    <a class="main" href="#">Plant Care</a>
+                    <ul class="submenu">
+                        <li><a class="sub" href="#">Drainage</a></li>
+                        <li><a class="sub" href="#">Fungicides</a></li>
+                        <li><a class="sub" href="#">Fertilizer</a></li>
+                        <li class="dropdown-two">
+                            <a class="priming" href="#">
+                                Priming
+                                <img src="images/priming.svg" alt="Priming" class="arrow">
+                            </a>
+                            <ul class="submenu-two">
+                                <li><a class="sub-two" href="#">Universal</a></li>
+                                <li><a class="sub-two" href="#">For Ficus</a></li>
+                                <li><a class="sub-two" href="#">For Cacti</a></li>
+                                <li><a class="sub-two" href="#">For Citrus</a></li>
+                                <li><a class="sub-two" href="#">For those in bloom</a></li>
+                                <li><a class="sub-two" href="#">For Orchids</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a class="main" href="#">Blogs</a></li>
             </ul>
-        </aside>
-
-    <div class="sale-banner">
-        <div class="sale-header">
-            <img src="images/super-sale.png" alt="Super Sale">
         </div>
-        <p class="sale-text">UP TO 75% OFF</p>
-        <div class="sale-image">
-            <img src="images/banner-plant.png" alt="Super Sale Plant">
-        </div>
+    </nav>
+    <div class="login-btn">
+        <button class="logout"><img src="./images/logout.svg" alt="login"></button>
+        <a class="button" href="./pages/registration.html">Login</a>
     </div>
+</header>
+<section class="hero">
+    <div class="hero-text">
+        <p class="welcome">WELCOME TO GREENSHOP</p>
+        <h1 class="big-text">LET'S MAKE A BETTER <span class="green">PLANET</span></h1>
+        <p class="description">
+            We are an online plant shop offering a wide range of cheap and trendy plants.
+            Use our plants to create a unique Urban Jungle. Order your favorite plants!
+        </p>
+        <button class="shop-now">SHOP NOW</button>
     </div>
-    <div class="wrapper-right">
-        <nav class="filter-nav">
-            <div class="nav-left">
-                <a href="#" class="active">All Plants</a>
-                <a href="#">New Arrivals</a>
-                <a href="#">Sale</a>
-            </div>
-            <div class="nav-right">
-                <a href="#" class="down">Sort by: Default sorting
-                    <img src="images/arrow-down.svg" alt="hide">
-                </a>
-            </div>
-        </nav>
-
-        <section class="product-list">
-            <div class="float-block">
-                <div class="buttons">
-                    <button class="shopping">
-                        <img src="images/shopping.svg" alt="Shopping">
-                    </button>
-                    <button class="heart">
-                        <img src="images/heart.svg" alt="Heart">
-                    </button>
-                    <button class="find">
-                        <img src="images/find.svg" alt="Find">
-                    </button>
-                </div>
-                <div class="card-wrapper">
-                    <div class="img-card">
-                        <img src="images/barberton.png" alt="icon">
-                    </div>
-                </div>
-                <div class="card-info">
-                    <h5>Barberton Daisy</h5>
-                    <p>$119.00</p>
-                </div>
-            </div>
-
-            <div class="float-block-active">
-                <div class="buttons">
-                    <button class="shopping">
-                        <img src="images/shopping.svg" alt="Shopping">
-                    </button>
-                    <button class="heart">
-                        <img src="images/heart.svg" alt="Heart">
-                    </button>
-                    <button class="find">
-                        <img src="images/find.svg" alt="Find">
-                    </button>
-                </div>
-                <div class="card-wrapper">
-                    <div class="img-card">
-                        <img src="images/begonia.png" alt="icon">
-                    </div>
-                </div>
-                <div class="card-info">
-                    <h5>Angel Wing Begonia</h5>
-                    <p>$169.00</p>
-                </div>
-            </div>
-
-            <div class="float-block">
-                <div class="buttons">
-                    <button class="shopping">
-                        <img src="images/shopping.svg" alt="Shopping">
-                    </button>
-                    <button class="heart">
-                        <img src="images/heart.svg" alt="Heart">
-                    </button>
-                    <button class="find">
-                        <img src="images/find.svg" alt="Find">
-                    </button>
-                </div>
-                <div class="card-wrapper">
-                    <div class="discount-badge">13% OFF</div>
-                    <div class="img-card">
-                        <img src="images/violet.png" alt="icon">
-                    </div>
-                </div>
-                <div class="card-info">
-                    <h5>African Violet</h5>
-                    <p>$199.00 <del>$229.00</del></p>
-                </div>
-            </div>
-
-            <div class="float-block">
-                <div class="card-wrapper">
-                    <div class="img-card">
-                        <img src="images/lily.png" alt="icon">
-                    </div>
-                </div>
-                <div class="card-info">
-                    <h5>Beach Spider Lily</h5>
-                    <p>$129.00</p>
-                </div>
-            </div>
-
-            <div class="float-block">
-                <div class="card-wrapper">
-                    <div class="img-card">
-                        <img src="images/bromeliad.png" alt="icon">
-                    </div>
-                </div>
-                <div class="card-info">
-                    <h5>Blushing Bromeliad</h5>
-                    <p>$139.00</p>
-                </div>
-            </div>
-
-            <div class="float-block">
-                <div class="card-wrapper">
-                    <div class="img-card">
-                        <img src="images/aluminum-plant.png" alt="icon">
-                    </div>
-                </div>
-                <div class="card-info">
-                    <h5>Aluminum Plant</h5>
-                    <p>$179.00</p>
-                </div>
-            </div>
-
-            <div class="float-block">
-                <div class="card-wrapper">
-                    <div class="img-card">
-                        <img src="images/nest-fern.png" alt="icon">
-                    </div>
-                </div>
-                <div class="card-info">
-                    <h5>Bird's Nest Fern</h5>
-                    <p>$99.00</p>
-                </div>
-            </div>
-
-            <div class="float-block">
-                <div class="card-wrapper">
-                    <div class="img-card">
-                        <img src="images/lady-palm.png" alt="icon">
-                    </div>
-                </div>
-                <div class="card-info">
-                    <h5>Broadleaf Lady Palm</h5>
-                    <p>$59.00</p>
-                </div>
-            </div>
-
-            <div class="float-block">
-                <div class="card-wrapper">
-                    <div class="img-card">
-                        <img src="images/chinese-evergreen.png" alt="icon">
-                    </div>
-                </div>
-                <div class="card-info">
-                    <h5>Chinese Evergreen</h5>
-                    <p>$39.00</p>
-                </div>
-            </div>
-        </section>
-        <div class="pagination">
-            <a href="#" class="active">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">4</a>
-            <a href="#" class="other">
-                <img src="images/arrow-right.svg" alt="arrow-right">
-            </a>
+    <div class="container">
+        <img src="./images/plants.svg" alt="Big plant" class="big-image">
+        <div class="small-box">
+            <img src="./images/plants-2.svg" alt="Small plant" class="small-image">
         </div>
     </div>
-</div>
+</section>
 </body>
 </html>

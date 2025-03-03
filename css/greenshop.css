@@ -11,30 +11,140 @@ header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    border-bottom: 0.3px solid rgba(70, 163, 88, 0.5);
+    border-bottom: 0.3px solid rgba(70, 163, 88, 0.5)
 
 }
 .navbar {
     max-width: 1200px;
     margin: 30px auto 12px;
+    gap: 24px;
 }
 nav {
     margin-left: 230px;
 }
-
-nav ul li {
-    display: inline-block;
-    margin: 0 20px;
-    padding-top: 8px;
-    padding-bottom: 25px;
+nav .navmenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
 }
 
-nav ul li a {
+nav .navmenu ul li {
+    position: relative;
+}
+
+nav .navmenu ul li a.main {
+    display: inline-block;
+    padding: 10px 15px;
     text-decoration: none;
-    font-size: 16px;
-    font-weight: 400;
-    padding-bottom: 5px;
+    color: #333;
+    font-weight: normal;
+}
+
+nav .navmenu ul li a.main:hover {
+    font-weight: bold;
+}
+
+nav .navmenu ul li a.main::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgba(70, 163, 88, 1);
+    transition: width 0.3s ease;
+}
+
+nav .navmenu ul li a.main:hover::after {
+    width: 100%;
+}
+
+.dropdown .submenu {
+    display: none;
+    position: absolute;
+    margin-top: 18px;
+    margin-left: -26px;
+    background: rgba(237, 246, 238, 1);
+    padding: 0;
+    list-style: none;
+    width: 160px;
+    z-index: 10;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+.dropdown .submenu li a.sub {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
     color: rgba(61, 61, 61, 1);
+    font-weight: normal;
+}
+.dropdown .submenu li a.sub:hover,
+.dropdown-two .submenu-two li a.sub-two:hover {
+    background-color: rgba(237, 246, 238, 1);
+    font-weight: bold;
+}
+
+.dropdown-two .submenu-two {
+    display: none;
+    position: absolute;
+    margin-left: 160px;
+    margin-top: -160px;
+    background: rgba(237, 246, 238, 1);
+    padding: 0;
+    list-style: none;
+    width: 178px;
+    z-index: 11;
+}
+
+.dropdown-two:hover .submenu-two {
+    display: block;
+}
+
+.dropdown-two .submenu-two li a.sub-two {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: rgba(61, 61, 61, 1);
+    font-weight: normal;
+}
+
+.dropdown-two .submenu-two li a.sub-two:hover {
+    background-color: transparent;
+    font-weight: bold;
+}
+
+.dropdown .submenu li.dropdown-two a.priming {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: rgba(61, 61, 61, 1);
+    font-weight: normal;
+    background-color: rgba(237, 246, 238, 1);
+}
+
+.dropdown .submenu li.dropdown-two a.priming:hover {
+    font-weight: bold;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(26, 113, 42, 1);
+}
+.arrow {
+    width: 10px;
+    height: 10px;
+    margin-left: 56px;
+    vertical-align: middle;
+}
+
+img[alt="Priming"] {
+    transition: transform 0.4s ease;
+}
+
+.dropdown .submenu li.dropdown-two a.priming:hover img[alt="Priming"] {
+    transform: rotate(180deg);
 }
 
 .logo {
@@ -86,7 +196,7 @@ nav ul li a {
     color: rgba(255, 255, 255, 1);
     border: none;
     margin-bottom: 18px;
-    margin-left: 316px;
+    margin-left: 334px;
     padding: 8px 18px 8px 40px;
     border-radius: 6px;
     cursor: pointer;
