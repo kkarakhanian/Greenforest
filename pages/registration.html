@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +17,7 @@
             font-family: "Cera Pro", sans-serif;
             font-weight: 400;
         }
-        input {
+        input, .checkbox-wrapper-42 {
             font-family: "Cera Pro", sans-serif;
             font-weight: 400;
         }
@@ -34,8 +34,129 @@
             font-weight: 500;
         }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const passwordContainer = document.querySelector('.password-container');
+            const passwordInput = passwordContainer.querySelector('.password-input');
+            const togglePassButton = passwordContainer.querySelector('.toggle-pass');
+            const hideEyeIcon = passwordContainer.querySelector('.hide-eye');
+
+            togglePassButton.addEventListener('click', function(event) {
+                event.preventDefault();
+
+                if (passwordInput.type === 'password') {
+                    passwordInput.type = 'text';
+                    hideEyeIcon.style.display = 'none';
+
+                    const showEye = document.createElementNS(
+                        'http://www.w3.org/2000/svg',
+                        'use'
+                    );
+                    showEye.setAttributeNS(
+                        'http://www.w3.org/1999/xlink',
+                        'xlink:href',
+                        '../sprite.svg#show-eye'
+                    );
+                    togglePassButton.querySelector('svg').appendChild(showEye);
+                } else {
+                    passwordInput.type = 'password';
+                    hideEyeIcon.style.display = 'block';
+
+                    togglePassButton.querySelector('svg').innerHTML = '';
+                    togglePassButton.querySelector('svg').appendChild(hideEyeIcon);
+                }
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const registerButton = document.querySelector('.register-btn');
+            const checkbox = document.getElementById('cbx-42');
+            const errorMessage = document.querySelector('.error-message');
+
+            registerButton.addEventListener('click', function (event) {
+                if (!checkbox.checked) {
+                    event.preventDefault();
+                    errorMessage.style.display = 'block';
+                } else {
+                    errorMessage.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const usernameInput = document.querySelector('input[name="username"]');
+            const usernameError = document.getElementById('username-error');
+
+            usernameInput.addEventListener('blur', function () {
+                const usernameRegex = /^[A-Za-z]+$/;
+                if (!usernameRegex.test(usernameInput.value)) {
+                    usernameInput.classList.add('error');
+                    usernameError.style.display = 'inline';
+                } else {
+                    usernameInput.classList.remove('error');
+                    usernameError.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const emailInput = document.querySelector('input[name="email"]');
+            const emailError = document.getElementById('email-error');
+
+            emailInput.addEventListener('blur', function () {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(emailInput.value)) {
+                    emailInput.classList.add('error');
+                    emailError.style.display = 'inline';
+                } else {
+                    emailInput.classList.remove('error');
+                    emailError.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const passwordInput = document.querySelector('.password-input');
+            const passwordError = document.getElementById('password-error');
+
+            passwordInput.addEventListener('blur', function () {
+                const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^a-zA-Z\d]).{8,}$/;
+                if (!passwordRegex.test(passwordInput.value)) {
+                    passwordInput.classList.add('error');
+                    passwordError.style.display = 'inline';
+                } else {
+                    passwordInput.classList.remove('error');
+                    passwordError.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const passwordInput = document.querySelector('input[name="password"]');
+            const confirmPasswordInput = document.querySelector('input[name="confirm-password"]');
+            const confirmPasswordError = document.getElementById('confirm-password-error');
+            const form = document.querySelector('form');
+
+            form.addEventListener('submit', function (event) {
+                if (passwordInput.value !== confirmPasswordInput.value) {
+                    event.preventDefault();
+                    confirmPasswordError.style.display = 'inline';
+                } else {
+                    confirmPasswordError.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </head>
 <body>
+<div class="mask">
+    <div class="loader"></div>
+</div>
 <div class="modal">
     <div class="header">
         <span class="login">Login</span>
@@ -46,21 +167,40 @@
     <form>
         <input type="text" name="username" placeholder="Username"
                pattern="[A-Za-z]+" required>
+        <span id="username-error" style="color: red; display: none;">Only letters are allowed</span>
+
         <input type="email" name="email" placeholder="Enter your email address" required>
+        <span id="email-error" style="color: red; display: none;">Invalid email format</span>
+
         <div class="password-container">
-            <input type="password" name="password" placeholder="Password"
-                   pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^a-zA-Z\d]).{8,}$"
+            <input type="password" class="password-input" placeholder="Password"
+                   pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^a-zA-Z\d]).{8,}$" required
                    title="Must contain at least one number and one uppercase and lowercase letter, and at least 8
-           or more characters" required>
+           or more characters">
             <button class="toggle-pass">
                 <svg class="hide-eye" width="20px" height="20px"><use xlink:href="../sprite.svg#hide-eye"/></svg>
             </button>
+            <span id="password-error" style="color: red; display: none;">
+            Password is not valid
+            </span>
+
         </div>
         <div class="password-container">
-            <input type="password" name="confirm-password" placeholder="Confirm Password"
+            <input type="password" class="password-input" placeholder="Confirm Password"
                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^a-zA-Z\d]).{8,}$" required>
+            <span id="confirm-password-error" style="color: red; display: none;">
+            Passwords do not match
+            </span>
+        </div>
+        <div class="checkbox-wrapper-42">
+            <input id="cbx-42" type="checkbox"/>
+            <label class="cbx" for="cbx-42"></label>
+            <label class="lbl" for="cbx-42">I accept privacy policy</label>
         </div>
         <button type="submit" class="register-btn">Register</button>
+        <p class="error-message" style="color: red; display: none;">
+            Please accept the privacy policy.
+        </p>
     </form>
     <div class="divider">Or register with</div>
     <div class="social-buttons">
@@ -72,5 +212,14 @@
         </button>
     </div>
 </div>
+<script>
+    let mask = document.querySelector('.mask');
+    window.addEventListener('load', () => {
+        mask.classList.add('hide');
+        setTimeout(() => {
+            mask.remove();
+        },3000)
+    });
+</script>
 </body>
 </html>
