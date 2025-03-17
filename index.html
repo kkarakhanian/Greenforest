@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/font.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 992px)" href="./css/tablet.css">
+    <link rel="stylesheet" media="screen and (max-width: 480px)" href="./css/phone.css">
     <style>
         nav {
             font-family: "Cera Pro", sans-serif;
@@ -201,6 +203,30 @@
 </div>
 <body>
 <div class="custom-spinner"></div>
+<section class="mobile-nav">
+<nav>
+    <div class="navbar-mobile">
+        <div class="container nav-container">
+            <input class="checkbox" type="checkbox" name="" id=""/>
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <div class="logo">
+                <svg class="logo-svg" width="35px" height="35px"><use xlink:href="./sprite.svg#logo-svg"/></svg>
+            </div>
+            <div class="menu-items">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Plant Care</a></li>
+                <li><a href="#">Blogs</a></li>
+                <li><a href="#">Login</a></li>
+            </div>
+        </div>
+    </div>
+</nav>
+</section>
 <header class="navbar">
     <div class="logo">
         <svg class="logo-svg" width="35px" height="35px"><use xlink:href="./sprite.svg#logo-svg"/></svg>
@@ -266,7 +292,7 @@
         </div>
     </div>
 </section>
-<main>
+<section class="middle">
     <div class="wrapper-left">
         <aside class="sidebar">
             <h3>Categories</h3>
@@ -532,7 +558,7 @@
             </a>
         </div>
     </div>
-</main>
+</section>
 
     <div class="container-plant">
         <div class="flex-left">
@@ -570,7 +596,7 @@
     </div>
 
 
-<main class="footer">
+<section class="footer">
     <div class="container-main">
         <h1 class="big">Our Blog Posts</h1>
         <p class="one">We are an online plant shop offering a wide range of cheap and trendy plants. </p>
@@ -642,7 +668,7 @@
             </div>
         </div>
     </div>
-</main>
+</section>
 <section class="top">
     <div class="header-top">
         <img src="./images/picture.svg" alt="cactus-1">
@@ -670,8 +696,7 @@
         <p>We usually post offers and challenges in newsletter. We’re your online houseplant destination. We offer a wide range of houseplants and accessories shipped directly from our (green)house to yours! </p>
     </div>
 </section>
-<main>
-    <section class="middle-top">
+<section class="middle-top">
         <div class="logo-section">
             <svg class="logo-svg" width="35px" height="35px"><use xlink:href="./sprite.svg#logo-svg"/></svg>
             <h1>GREENSHOP</h1>
@@ -688,9 +713,8 @@
             <svg class="telephone" width="20px" height="20px"><use xlink:href="./sprite.svg#telephone"/></svg>
             <p>+88 01911 717 490</p>
         </div>
-    </section>
-</main>
-<footer class="footer-top">
+</section>
+<section class="footer-top">
     <div class="footer-diff">
         <div class="list-one">
             <h3>My Account</h3>
@@ -750,7 +774,7 @@
             <img src="./images/image-16.svg" alt="Payments">
         </div>
     </div>
-</footer>
+</section>
 <div class="end">
     <p>© 2021 GreenShop. All Rights Reserved.</p>
 </div>
@@ -761,6 +785,39 @@
         setTimeout(() => {
             mask.remove();
         },3000)
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const dropdownTwo = document.querySelector('.dropdown-two');
+        const submenuTwo = document.querySelector('.submenu-two');
+
+        function toggleSubmenu() {
+            if (submenuTwo.style.display === 'block') {
+                submenuTwo.style.display = 'none';
+            } else {
+                submenuTwo.style.display = 'block';
+            }
+        }
+
+        dropdownTwo.addEventListener('mouseenter', function() {
+            submenuTwo.style.display = 'block';
+        });
+
+        dropdownTwo.addEventListener('mouseleave', function() {
+            submenuTwo.style.display = 'none';
+        });
+
+        dropdownTwo.addEventListener('click', function(event) {
+            event.stopPropagation(); // Предотвращаем всплытие события
+            toggleSubmenu();
+        });
+
+        document.addEventListener('click', function(event) {
+            if (!submenuTwo.contains(event.target) && submenuTwo.style.display === 'block') {
+                submenuTwo.style.display = 'none';
+            }
+        });
     });
 </script>
 </body>

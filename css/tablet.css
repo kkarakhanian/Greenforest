@@ -1,0 +1,149 @@
+
+.hero {
+    flex-direction: column;
+}
+.hero-text {
+    align-items: center;
+    text-align: center;
+}
+.big-text {
+    text-align: center;
+}
+.big-image {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    height: auto;
+}
+.small-image {
+    display: none;
+}
+.wrapper-left {
+    display: none;
+}
+.wrapper-right {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    justify-content: center;
+}
+
+.container-plant {
+    flex-direction: column;
+    margin-bottom: 60px;
+    text-align: center;
+    justify-content: center;
+}
+.left:hover, .right:hover {
+    transform: none;
+}
+
+.flexbox-main {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    justify-content: center;
+}
+.top {
+    display: flex;
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: none;
+    gap: 16px;
+}
+.header-top {
+    justify-content: center;
+}
+.header-single {
+    justify-content: center;
+}
+.header-three {
+    justify-content: center;
+    margin: 0;
+    padding-left: 16px;
+}
+.header-diff {
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: none;
+    margin: 0;
+}
+.middle-top {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 200px;
+    padding-left: 8px;
+}
+.footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    background: none;
+}
+.footer-top::after {
+    background: none;
+}
+.footer-diff {
+    margin: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+.footer-diff > div {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+.footer-diff h3 {
+    font-size: 16px;
+    text-align: center;
+}
+
+.footer-diff ul {
+    margin-bottom: 24px;
+}
+
+.list-two,
+.list-three {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+.list-four {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+.list-four h2 {
+    text-align: center;
+}
+
+.icons {
+    justify-content: center;
+}
+
+.list-four img {
+    width: 180px;
+    margin: 0 auto;
+}
+
+.divider-top {
+    display: none;
+}
+.divider-second {
+    display: none;
+}
+.end {
+    margin-top: 210px;
+    padding: 0 20px;
+}
+
+.end p {
+    font-size: 14px;
+    line-height: 1.4;
+}
