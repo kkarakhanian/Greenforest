@@ -633,14 +633,14 @@ img[alt="Priming"] {
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
-    padding: 0 10px;
     grid-gap: 10px;
     row-gap: 40px;
+    padding-right: 10px;
 }
 
 .float-block {
     position: relative;
-    width: 258px;
+    width: 48%;
     height: 300px;
     display: flex;
     flex-direction: column;
@@ -653,7 +653,7 @@ img[alt="Priming"] {
     content: "";
     position: absolute;
     top: 0;
-    width: 258px;
+    width: 100%;
     height: 1px;
     background: #46a358;
 }
@@ -749,7 +749,6 @@ img[alt="Priming"] {
 .buttons {
     z-index: 3;
     position: absolute;
-    left: 66px;
     bottom: 2px;
     width: 128px;
     height: 34px;
@@ -1086,7 +1085,6 @@ img[alt="Priming"] {
     padding-left: 20px;
     justify-content: space-between;
     align-items: center;
-    gap: 130px;
 }
 .logo-section {
     flex: 1;
@@ -1138,7 +1136,6 @@ img[alt="Priming"] {
 }
 .footer-top {
     max-width: 1200px;
-    max-height: 236px;
     margin: 0 auto;
     padding-top: 28px;
     position: relative;
@@ -1269,7 +1266,6 @@ img[alt="Priming"] {
 }
 .end {
     text-align: center;
-    margin-top: 14px;
 }
 .end p {
     font-size: 14px;
