@@ -18,8 +18,8 @@ header {
 }
 
 .navbar {
-    margin-left: 10px;
-    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     margin-top: 30px;
     margin-bottom: 12px;
     justify-content: space-between;
