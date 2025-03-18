@@ -130,7 +130,7 @@ body {
 }
 
 .flexbox-item {
-    background: none;
+    background: rgba(251, 251, 251, 1);
     overflow: hidden;
     width: 100%;
     text-align: left;

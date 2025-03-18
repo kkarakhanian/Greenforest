@@ -852,17 +852,16 @@ img[alt="Priming"] {
     justify-content: center;
 }
 .flexbox-item {
-    background-color: white;
+    background: rgba(251, 251, 251, 1);
     overflow: hidden;
     text-align: left;
     width: calc(25% - 20px);
-    max-width: 280px;
+    max-width: 268px;
 }
 
 .flexbox-item img {
-    width: 100%;
     height: auto;
-    max-width: 250px;
+    max-width: 100%;
 }
 .text-flex {
     font-size: 1rem;
