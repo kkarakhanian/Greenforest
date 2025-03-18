@@ -1,4 +1,11 @@
-
+body {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.navbar {
+    margin-left: 2px;
+    margin-right: 2px;
+}
 .hero {
     flex-direction: column;
 }
@@ -23,25 +30,139 @@
 }
 .wrapper-right {
     display: flex;
+    gap: 20px;
     flex-direction: column;
     max-width: 100%;
     justify-content: center;
 }
+.filter-nav {
+    max-width: 100%;
+}
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 10px;
+}
+.float-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 300px;
+    width: 100%;
+    padding: 20px;
+    background: rgba(251, 251, 251, 1);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.float-block:hover:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    max-width: 300px;
+    width: 100%;
+    height: 1px;
+    background: #46a358;
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    left: 28%;
+}
+
+.buttons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.img-card img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-top: 0;
+}
+.card-info {
+    text-align: center;
+}
+.card-info h5 {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.card-info p {
+    font-size: 14px;
+}
+.pagination a {
+    margin-top: 0;
+}
 
 .container-plant {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    max-width: 100%;
     flex-direction: column;
     margin-bottom: 60px;
     text-align: center;
+    align-items: stretch;
     justify-content: center;
+    gap: 40px;
 }
 .left:hover, .right:hover {
     transform: none;
 }
 
+.big {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.one {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #666;
+}
+
 .flexbox-main {
     display: flex;
     flex-wrap: wrap;
-    max-width: 100%;
+    gap: 60px;
+    justify-content: center;
+}
+
+.flexbox-item {
+    background: none;
+    overflow: hidden;
+    width: 100%;
+    text-align: left;
+}
+
+.img-flex img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.text-flex {
+    padding: 20px;
+}
+
+.main {
+    font-size: 14px;
+    color: rgba(70, 163, 88, 1);
+    text-align: center;
+}
+.secondary {
+    text-align: center;
+}
+.option {
+    text-align: center;
+}
+.read-more {
+    align-items: center;
     justify-content: center;
 }
 .top {
@@ -66,12 +187,15 @@
     padding-left: 16px;
 }
 .header-diff {
+    background: none;
     max-width: 100%;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: none;
     margin: 0;
+}
+.input-button-container input[type="email"] {
+    border-color: rgba(61, 61, 61, 1);
 }
 .middle-top {
     display: flex;
@@ -79,6 +203,9 @@
     gap: 10px;
     margin-top: 200px;
     padding-left: 8px;
+}
+.footer {
+    padding: 0;
 }
 .footer-top {
     display: flex;
@@ -118,6 +245,7 @@
     width: 100%;
     text-align: center;
     margin-top: 20px;
+    margin-right: 10px;
 }
 .list-four h2 {
     text-align: center;

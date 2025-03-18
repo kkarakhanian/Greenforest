@@ -18,6 +18,8 @@ header {
 }
 
 .navbar {
+    margin-left: 10px;
+    margin-right: 10px;
     margin-top: 30px;
     margin-bottom: 12px;
     justify-content: space-between;
@@ -588,6 +590,7 @@ img[alt="Priming"] {
 }
 .nav-right {
     letter-spacing: 1.6px;
+    margin-right: 10px;
 }
 .default {
     margin-left: 6px;
@@ -626,11 +629,12 @@ img[alt="Priming"] {
 }
 
 .product-list {
-    max-width: 840px;
     display: flex;
     flex-wrap: wrap;
-    grid-gap: 33px;
-    row-gap: 40px;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 10px;
+    grid-gap: 50px;
 }
 
 .float-block {
@@ -775,7 +779,6 @@ img[alt="Priming"] {
 }
 
 .container-plant {
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -830,14 +833,36 @@ img[alt="Priming"] {
 }
 
 .footer {
+        width: 100%;
+        padding: 50px 20px;
+        text-align: center;
+}
+.container-main {
+    max-width: 1200px;
     margin: 0 auto;
-    margin-top: 134px;
-    margin-bottom: 108px;
-    text-align: center;
+    padding: 0 10px;
+}
+.flexbox-main {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
     justify-content: center;
-    align-items: center;
+}
+.flexbox-item {
+    background-color: white;
+    overflow: hidden;
+    text-align: left;
+    width: calc(25% - 20px);
+    max-width: 280px;
+}
+
+.flexbox-item img {
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+}
+.text-flex {
+    font-size: 1rem;
 }
 
 .big {
@@ -858,24 +883,6 @@ img[alt="Priming"] {
 
 .left:hover, .right:hover {
     transform: scale(1.1);
-}
-
-.flexbox-main {
-    display: flex;
-    justify-content: space-between;
-    gap: 44px;
-}
-
-
-.flexbox-item {
-    max-width: 268px;
-    max-height: 362px;
-    background: rgba(251, 251, 251, 1);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    text-align: left;
 }
 
 .img-flex {
