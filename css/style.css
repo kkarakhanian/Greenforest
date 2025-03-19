@@ -640,7 +640,7 @@ img[alt="Priming"] {
 
 .float-block {
     position: relative;
-    width: 48%;
+    width: 32%;
     height: 300px;
     display: flex;
     flex-direction: column;
