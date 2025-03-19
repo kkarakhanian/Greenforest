@@ -6,6 +6,12 @@ body {
     margin-left: 2px;
     margin-right: 2px;
 }
+nav .navmenu {
+    transform: none;
+}
+nav .navmenu ul {
+    width: 100%;
+}
 .hero {
     flex-direction: column;
 }

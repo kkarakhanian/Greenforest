@@ -352,7 +352,7 @@ img[alt="Priming"] {
 
 .small-box {
     position: absolute;
-    bottom: 14px;
+    bottom: 90px;
     left: 52px;
     width: 135px;
 }
@@ -362,8 +362,9 @@ img[alt="Priming"] {
 .middle {
     display: flex;
     max-width: 1200px;
+    width: 96%;
     margin: 0 auto;
-    gap: 50px;
+    gap: 60px;
 }
 
 .wrapper-left {
