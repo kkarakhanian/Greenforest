@@ -226,10 +226,7 @@ body.no-scroll {
     background: rgba(251, 251, 251, 1);
 }
 .text-flex {
-    padding-top: 10px;
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 0;
+    padding: 10px 0 0 0;
 }
 
 .img-flex img {
@@ -293,7 +290,6 @@ body.no-scroll {
     margin-top: 0;
     display: flex;
     flex-direction: column;
-    height: auto;
     padding: 10px 0 10px 0;
 }
 .phone {
